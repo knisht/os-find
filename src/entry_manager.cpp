@@ -29,7 +29,7 @@ void entry_manager::execute(std::string const &executable_name, std::string arg)
         if (result == -1) {
             std::cerr << "Cannot execute given program" << std::endl;
         }
-        exit(EXIT_SUCCESS);
+        exit(EXIT_FAILURE);
     } else {
         int result = waitpid(pid, nullptr, 0);
         if (result == -1) {
